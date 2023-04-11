@@ -22,8 +22,8 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 ![](./screenshots/mobile.png)
 
 ### Links
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/Mdxr/Result-Summery-Component)
+- Live Site URL: (https://mdxr.github.io/Result-Summery-Component/)
 
 ## My process
   Used Grid for the component and changed it to flex in mobile views.

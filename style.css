@@ -1,0 +1,208 @@
+      :root {
+        /*Colors*/
+        --Light-red: hsl(0, 100%, 67%);
+        --Light-red-bg: hsl(0, 100%, 95%);
+        --Orangey-yellow: hsl(39, 100%, 56%);
+        --Orangey-yellow-bg: hsl(39, 100%, 95%);
+        --Green-teal: hsl(166, 100%, 37%);
+        --Green-teal-bg: hsl(166, 100%, 95%);
+        --Cobalt-blue: hsl(234, 85%, 45%);
+        --Cobalt-blue-bg: hsl(234, 85%, 95%);
+
+        /*Gardient Background*/
+        --Light-slate-blue: hsl(252, 100%, 67%);
+        --Light-royal-blue: hsl(241, 81%, 54%);
+
+        /*Gradient Circle*/
+        --Violet-blue: hsla(256, 72%, 46%, 1);
+        --Persian-blue: hsla(241, 72%, 46%, 0);
+
+        /*Neutral colors*/
+        --White: hsl(0, 0%, 100%);
+        --Pale-blue: hsl(221, 100%, 96%);
+        --Light-lavender: hsl(241, 100%, 89%);
+        --Dark-gray-blue: hsl(224, 30%, 27%);
+        --light-gray-blue: hsl(224, 30%, 67%);
+      }
+      * {
+        font-family: "Hanken Grotesk", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .component-container {
+        height: 100dvh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .component-container .component{
+        background-color: var(--White);
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+        border-radius: 35px;
+        box-shadow: 5px 15px 35px var(--Pale-blue);
+        width: 55%;
+      }
+
+      .component .result{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background:linear-gradient(var(--Light-slate-blue),var(--Light-royal-blue));
+        gap: 2rem;
+        padding: 2rem;
+        border-radius: inherit;
+      }
+
+      .component .result h2{
+        color: var(--Light-lavender);
+      }
+      .component .result .result-circle{
+        background: linear-gradient(var(--Violet-blue),var(--Persian-blue));
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .component .result .result-circle h1{
+        font-size: 69px;
+        color: var(--White);
+      }
+      .component .result .result-circle p{
+        color: var(--Light-lavender);
+        font-size: 19px;
+      }
+      
+      .component .result .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        padding: 2rem;
+      }
+      .component .result .info h1{
+        color: var(--White);
+      }
+      .component .result .info p{
+        color: var(--Light-lavender);
+        font-size: 17px;
+        font-weight: 400;
+      }
+      .component .summery{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2rem;
+        height: 100%;
+        text-align: start;
+        padding: 2rem;
+        color: var(--Dark-gray-blue);
+      }
+      .component .summery .tabs{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+      }
+      .component .summery .tabs .tab{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+      .component .summery .tabs .tab .tab-title{
+        display: flex;
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
+      }
+      .component .summery .tabs .tab .tab-title .title{
+        font-weight: 500;
+      }
+      .component .summery .tabs .tab .score{
+        color: var(--light-gray-blue);
+
+      }
+      .component .summery .tabs .tab .score span{
+        color: var(--Dark-gray-blue);
+      }
+      .component .summery button{
+        background-color: var(--Dark-gray-blue);
+        border: none;
+        border-radius: 35px;
+        color: var(--White);
+        width: 100%;
+        padding: 1rem;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .component .summery button:hover{
+        background: linear-gradient(var(--Light-slate-blue),var(--Light-royal-blue));;
+      }
+
+      .component .summery .tabs #red{
+        background-color: var(--Light-red-bg);
+        color: var(--Light-red);
+      }
+      .component .summery .tabs #yellow{
+        background-color: var(--Orangey-yellow-bg);
+        color: var(--Orangey-yellow);
+      }
+      .component .summery .tabs #green{
+        background-color: var(--Green-teal-bg);
+        color: var(--Green-teal);
+      }
+      .component .summery .tabs #blue{
+        background-color: var(--Cobalt-blue-bg);
+        color: var(--Cobalt-blue);
+      }
+
+      /*responsive styles*/
+      @media only screen and (max-width: 1000px) {
+        .component-container .component{
+          width: 80%;
+        }
+      }
+      @media only screen and (max-width: 750px) {
+        .component-container{
+          height: 100%;
+        }
+
+        .component-container .component{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          border-radius: 0 0 35px 35px;
+        }
+        .component .summery{
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .component .result .info{
+          padding: 1rem;
+        }
+      }
+
+      /*Attribution*/
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        padding: .5rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }

@@ -17,6 +17,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 ### Screenshot
 - desktop
 ![](./screenshots/destop.png)
+
 - mobile
 ![](./screenshots/mobile.png)
 
